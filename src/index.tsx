@@ -1,3 +1,4 @@
-export function multiply(a: number, b: number): Promise<number> {
-  return Promise.resolve(a * b);
-}
+import CacheVideo from './components/videoCompont';
+import CacheImage from './components/imageCompont';
+
+export { CacheImage, CacheVideo };

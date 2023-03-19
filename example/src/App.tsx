@@ -1,18 +1,27 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-media-cache';
+import { StyleSheet, View } from 'react-native';
+import { CacheImage, CacheVideo } from 'react-native-media-cache';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      {/* cache Image */}
+      <CacheImage
+        style={styles.image}
+        source={{
+          uri: 'https://thumbs.dreamstime.com/b/closeup-portrait-muscular-man-workout-barbell-gym-brutal-bodybuilder-athletic-six-pack-perfect-abs-shoulders-55122231.jpg',
+        }}
+        resizeMode="cover"
+      />
+      {/* cache Video */}
+      <CacheVideo
+        style={styles.image}
+        source={{
+          uri: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        }}
+        resizeMode="cover"
+      />
     </View>
   );
 }
@@ -23,9 +32,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
-  },
+  image: { height: 500, width: 500 },
 });

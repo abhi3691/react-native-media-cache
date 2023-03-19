@@ -1,0 +1,14 @@
+#!/bin/sh
+# Runs ESLint and Jest tests before committing
+
+# Run ESLint
+npm run lint
+
+# Run Jest tests
+npm test
+
+# If either of the above commands failed, exit with a non-zero status
+if [ $? -ne 0 ]; then
+  echo "Pre-commit checks failed. Aborting commit."
+  exit 1
+fi
