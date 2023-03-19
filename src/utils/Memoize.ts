@@ -1,4 +1,4 @@
-import shorthash from 'shorthash';
+import shorthash from 'shorthash2';
 import RNFS from 'react-native-fs';
 import { Platform } from 'react-native';
 
@@ -9,7 +9,7 @@ const memoize = async (url: string): Promise<src> => {
   // console.log(url);
   let UrlType = url.split('.').reverse()[0];
   var source = { uri: '' }; //variable we will send it back to our component
-  const name = shorthash.unique(url); //creating a unique id
+  const name = shorthash(url); //creating a unique id
   const extension = Platform.OS === 'android' ? 'file://' : ''; //extension for the file path
   const path = `${extension}${RNFS.CachesDirectoryPath}/${name}.${UrlType}`; //the path we are going to save data
   //for videos, you might need .mp4 extension after name

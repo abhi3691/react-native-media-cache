@@ -160,6 +160,6 @@
   "dependencies": {
     "react-native-fs": "^2.20.0",
     "react-native-video": "^5.2.1",
-    "shorthash": "^0.0.2"
+    "shorthash2": "^1.0.3"
   }
 }
