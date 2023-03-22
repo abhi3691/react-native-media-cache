@@ -1,8 +1,8 @@
 import React, { useLayoutEffect, useState } from 'react';
 import type { VideoProperties } from 'react-native-video';
 import Video from 'react-native-video';
+import memoize from '../../utils';
 import type mediaProps from '../mediaProps';
-import memoize from 'src/utils/Memoize';
 
 function CacheVideo({ source, ...props }: mediaProps & VideoProperties) {
   const [media, setMedia] = useState(source);

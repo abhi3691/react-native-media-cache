@@ -1,7 +1,7 @@
 import { Image, ImageProps } from 'react-native';
 import React, { useLayoutEffect, useState } from 'react';
 import type mediaProps from '../mediaProps';
-import memoize from 'src/utils/Memoize';
+import memoize from '../../utils';
 
 function CacheImage({ source, ...props }: mediaProps & ImageProps) {
   const [media, setMedia] = useState(source);
