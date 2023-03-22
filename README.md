@@ -19,17 +19,17 @@ import { CacheImage, CacheVideo } from 'react-native-media-cache';
 export default function App() {
   return (
     <View style={styles.container}>
-      {/* cache Image */}
+      {/* cash Image */}
       <CacheImage
-        style={styles.image}
+        style={{ height: 500, width: 500 }}
         source={{
           uri: 'https://thumbs.dreamstime.com/b/closeup-portrait-muscular-man-workout-barbell-gym-brutal-bodybuilder-athletic-six-pack-perfect-abs-shoulders-55122231.jpg',
         }}
         resizeMode="cover"
       />
-      {/* cache Video */}
+      {/* cash Video */}
       <CacheVideo
-        style={styles.image}
+        style={{ height: 500, width: 500 }}
         source={{
           uri: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
         }}
@@ -45,7 +45,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  image: { height: 500, width: 500 },
+  box: {
+    width: 60,
+    height: 60,
+    marginVertical: 20,
+  },
 });
 
 // ...
