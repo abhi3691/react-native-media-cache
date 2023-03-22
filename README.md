@@ -8,6 +8,8 @@
 npm install --save react-native-media-cache
 ```
 
+Now we need to install [`react-native-video`](https://www.npmjs.com/package/react-native-video) and [`react-native-fs`](https://www.npmjs.com/package/react-native-fs).
+
 ## Usage
 
 ```js
